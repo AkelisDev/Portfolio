@@ -1,0 +1,10 @@
+.image-size{
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}
+.image-150{
+    width: 150px;
+    height: 150px;
+    object-fit: fill;
+}
