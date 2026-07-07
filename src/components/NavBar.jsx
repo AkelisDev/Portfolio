@@ -23,7 +23,7 @@ const NavBar = () => {
                         ŽA
                     </span>
                     <span className="hidden font-mono text-sm text-neutral-400 sm:inline">
-                        akelis.dev
+                        akelisdev.com
                     </span>
                 </a>
 
