@@ -3,39 +3,103 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
-export const HERO_CONTENT = `I am a passionate front-end developer with a knack for crafting robust and scalable web applications. With 3 years of hands-on experience, I have honed my skills in front-end technologies like Vue.js and React.js, as well as back-end using Node.js. Recently, I have also been focusing on learning the Laravel framework for back-end and Next.js for extending React capabilities. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const RESUME_URL = "/resume.pdf";
 
-export const ABOUT_TEXT = `My journey into web development began with a fascination for understanding the inner workings of technology, evolving into a career where I thrive on continuous learning and adapting to new challenges. I excel in collaborative environments, where I leverage my problem-solving skills to deliver high-quality solutions. My goal is to apply my expertise to innovate and drive business growth through cutting-edge web solutions.
+export const HERO_ROLE = "Frontend Software Developer — ERP & Product Configuration Systems";
 
-Beyond coding, I maintain an active lifestyle and enjoy exploring emerging technologies and contributing to open-source projects, fostering a well-rounded approach to my professional and personal growth.
+export const HERO_CONTENT = `Frontend-leaning software developer with ~4 years building a production ERP platform for a manufacturing company, as the lead contributor on a 7-person engineering team. I specialize in complex, stateful UIs — dynamic form/configurator systems, data visualization, and document generation pipelines. Currently expanding into React and TypeScript.`;
 
-`;
+export const ABOUT_TEXT = `I've spent the last four years as the lead contributor on Ryterna's ERP and product configurator platform — a Vue.js system, built with a 7-person engineering team, that lets customers design windows, doors, and gates down to the hardware and turns that configuration into a priced, production-ready order.
+
+Most of that time has gone into problems without a textbook answer: designing a plugin-style controller architecture flexible enough for 16+ input types, keeping a 400+ component application from collapsing into spaghetti, and making sure a generated PDF quote matches the on-screen order to the pixel. I've been the most active contributor on the codebase — 1,500+ of roughly 2,800 commits — while working within the team's shared architecture and review process, and coordinating with backend and production-systems engineers to get shop-floor equipment talking to the configurator.
+
+I like work where the constraints are real: manufacturing tolerances, pricing rules, production-floor communication. It's less forgiving than a typical CRUD app — and that's exactly why I've stayed. Lately I've been extending that foundation into React and TypeScript.`;
+
+export const ADAPTABILITY_NOTE = "Deep Vue.js background with directly transferable fundamentals — component architecture, state management, form systems — currently applying those to React and TypeScript.";
+
+export const STATS = [
+  { value: "4+", label: "Years on one platform" },
+  { value: "7", label: "Person team, as lead contributor" },
+  { value: "1,500+", label: "Of ~2,800 platform commits" },
+  { value: "400+", label: "Components in production" },
+  { value: "16+", label: "Configurator controller types" },
+  { value: "86", label: "Vuex store modules" },
+];
+
+export const SKILLS = [
+  {
+    category: "Frontend & UI",
+    items: [
+      { name: "Vue.js", note: "Core stack — 4+ years" },
+      { name: "JavaScript (ES6+)", note: "Daily driver" },
+      { name: "React", note: "Currently expanding into — this site" },
+      { name: "TypeScript", note: "Currently expanding into" },
+      { name: "HTML5", note: "Semantic, accessible markup" },
+      { name: "CSS3", note: "Layout, animation" },
+      { name: "Tailwind CSS", note: "Utility-first styling" },
+      { name: "Bootstrap", note: "Rapid internal tooling" },
+    ],
+  },
+  {
+    category: "Architecture & State",
+    items: [
+      { name: "Vuex at scale", note: "86-module store design" },
+      { name: "Component architecture", note: "400+ components, no spaghetti" },
+      { name: "Plugin-style systems", note: "16+ controller-type engine" },
+      { name: "i18n / multi-locale", note: "Production content in several languages" },
+    ],
+  },
+  {
+    category: "Backend & Systems",
+    items: [
+      { name: "Node.js", note: "Service layer, tooling" },
+      { name: "REST APIs", note: "Design & integration" },
+      { name: "WebSocket / Telnet", note: "Production-floor integration" },
+      { name: "PDF document pipelines", note: "Pixel-parity quote generation" },
+      { name: "Git", note: "Branching, review, CI-friendly workflows" },
+    ],
+  },
+];
 
 export const EXPERIENCES = [
   {
     year: "2022 - Present",
-    role: "Front-end software Developer",
-    company: "Ryterna Group",
-    description: `Developed Manufacturing Software: Collaborated with a team to create an integrated software solution for a company group, encompassing various business processes such as manufacturing, storage, finance, and marketing.
-    Configurator Development: Developed a sophisticated configurator tool that generates dynamic drawings based on user-defined parameters and additional options, enhancing the customization and efficiency of the manufacturing process.
-    Web Application Development and Maintenance: Responsible for developing and maintaining robust web applications using JavaScript, Vue.js, and Node.js, ensuring seamless user experiences and optimal performance.
-    Implemented REST APIs: Designed and implemented REST APIs to facilitate communication between the front-end and back-end systems, ensuring data integrity and efficient processing.
-    Collaboration and Communication: Worked closely with technicians and administration to gather requirements, provide technical insights, and ensure the developed solutions met business needs and technical specifications.
-    Continuous Improvement: Actively participated in code reviews, pair programming sessions, and technical discussions to continuously improve code quality and team productivity.
-    Testing and Debugging: Conducted thorough testing and debugging of web applications to identify and fix issues, ensuring reliability and performance.`,
-    technologies: ["HTML", "CSS", "Javascript", "Bootstrap", "Vue.js", "Node.js"],
+    role: "Frontend Software Developer",
+    company: "Ryterna Group — ERP Platform",
+    summary: "Vue.js ERP system for a windows/doors/gates manufacturer, built with a 7-person engineering team.",
+    description: `Designed and led development of a rule-driven product configurator engine — 16+ pluggable controller types (sliders, color pickers, dependency logic, add-on modules) driving real-time pricing and visual previews for configurable manufactured products.
+Built the automated PDF quote/confirmation pipeline, keeping generated documents in exact visual and logical parity with the live order UI.
+Owned the state management architecture (86 Vuex modules) and the validation framework across a multi-step order flow, including multi-file upload handling.
+Coordinated with backend and production-systems engineers to integrate shop-floor equipment communication (WebSocket, Telnet) into the configurator.
+Most active contributor on the codebase — 1,500+ of roughly 2,800 commits — while working across the team's shared architecture and review process.`,
+    technologies: ["Vue.js", "Vuex", "JavaScript", "Node.js", "REST APIs", "WebSocket", "HTML", "CSS", "Bootstrap"],
   },
 ];
 
 export const PROJECTS = [
+  {
+    title: "UI Kit",
+    description:
+      "An accessible component library — Button, Checkbox, TextField, Select, Dialog — each keyboard-operable and verified with jest-axe in every test file. The Select is a from-scratch ARIA combobox instead of a wrapped native element; the Dialog implements a real focus trap with restoration. 32 tests passing.",
+    technologies: ["React", "TypeScript", "Vitest", "jest-axe", "Tailwind CSS"],
+    sourceUrl: "https://github.com/MethGuys/ui-kit",
+    demoPath: "/lab/ui-kit",
+  },
+  {
+    title: "Configurator Kit",
+    description:
+      "A schema-driven product configurator engine — dependency rules, live pricing, and validation — driving three unrelated demo products (bike builder, PC build, hoodie customizer) from plain schema data. Each instance is Context-scoped rather than a global singleton, so two configurators can run independently on the same page — verified with a dedicated isolation test. 32 tests passing. The public, non-proprietary version of the problem I solve daily on Ryterna's configurator platform.",
+    technologies: ["React", "TypeScript", "Zustand", "Vitest", "Tailwind CSS"],
+    sourceUrl: "https://github.com/MethGuys/configurator-kit",
+    demoPath: "/lab/configurator-kit",
+  },
   {
     title: "E-Commerce Website",
     image: project1,
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart.",
     technologies: ["HTML", "CSS", "React"],
-      sourceUrl: "https://github.com/MethGuys/E-Commerce.git",
-      liveUrl: "https://hnrcyg-3000.csb.app/"
+      sourceUrl: "https://github.com/MethGuys/E-Commerce.git"
   },
   {
     title: "Portfolio Website",
@@ -43,8 +107,7 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Bootstrap", "Tailwind"],
-      sourceUrl: "https://github.com/MethGuys/Portfolio.git",
-      liveUrl: ""
+      sourceUrl: "https://github.com/MethGuys/Portfolio.git"
   },
 ];
 
@@ -52,4 +115,9 @@ export const CONTACT = {
   address: "Pašilės g. 118, Kaunas, Lithuania",
   phoneNo: "+370 633 84741",
   email: "zilvinasakelis@yahoo.com",
+};
+
+export const SOCIALS = {
+  linkedin: "https://www.linkedin.com/in/akelis-zilvinas/",
+  github: "https://github.com/MethGuys",
 };

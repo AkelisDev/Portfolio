@@ -1,0 +1,92 @@
+import type { ConfiguratorSchema } from '../engine/types'
+
+export const bikeBuilderSchema: ConfiguratorSchema = {
+  id: 'bike-builder',
+  title: 'Custom Bike Builder',
+  description: 'Configure a bike frame, drivetrain, and finish.',
+  currency: 'USD',
+  basePrice: 450,
+  fields: [
+    {
+      id: 'frameSize',
+      type: 'select',
+      label: 'Frame size',
+      defaultValue: 'm',
+      validation: [{ type: 'required' }],
+      options: [
+        { value: 's', label: 'Small (5\'2" - 5\'6")' },
+        { value: 'm', label: 'Medium (5\'6" - 5\'10")' },
+        { value: 'l', label: 'Large (5\'10" - 6\'2")' },
+        { value: 'xl', label: 'X-Large (6\'2"+)' },
+      ],
+    },
+    {
+      id: 'frameColor',
+      type: 'color',
+      label: 'Frame color',
+      defaultValue: 'matte-black',
+      options: [
+        { value: 'matte-black', label: 'Matte Black', swatch: '#1c1c1c' },
+        { value: 'racing-red', label: 'Racing Red', swatch: '#b91c1c', priceModifier: 20 },
+        { value: 'ocean-blue', label: 'Ocean Blue', swatch: '#1d4ed8', priceModifier: 20 },
+        { value: 'chrome', label: 'Chrome', swatch: '#c7c9cc', priceModifier: 60 },
+      ],
+    },
+    {
+      id: 'wheelType',
+      type: 'radio',
+      label: 'Wheels',
+      defaultValue: 'standard',
+      options: [
+        { value: 'standard', label: 'Standard alloy' },
+        { value: 'offroad', label: 'Off-road knobby', priceModifier: 90 },
+        { value: 'carbon', label: 'Carbon fiber', priceModifier: 220 },
+      ],
+    },
+    {
+      id: 'gearing',
+      type: 'select',
+      label: 'Gearing',
+      defaultValue: 'single',
+      options: [
+        { value: 'single', label: 'Single-speed' },
+        { value: 'seven', label: '7-speed', priceModifier: 60 },
+        { value: 'twentyone', label: '21-speed', priceModifier: 140 },
+      ],
+    },
+    {
+      id: 'discBrakes',
+      type: 'checkbox',
+      label: 'Hydraulic disc brakes',
+      description: 'Better stopping power in wet conditions.',
+      defaultValue: false,
+      priceModifier: 75,
+    },
+    {
+      id: 'bottleHolders',
+      type: 'number',
+      label: 'Water bottle holders',
+      defaultValue: 1,
+      min: 0,
+      max: 3,
+      step: 1,
+      priceMultiplier: 8,
+    },
+    {
+      id: 'customEngraving',
+      type: 'checkbox',
+      label: 'Add custom frame engraving',
+      defaultValue: false,
+      priceModifier: 15,
+    },
+    {
+      id: 'engravingText',
+      type: 'text',
+      label: 'Engraving text',
+      description: 'Up to 20 characters.',
+      placeholder: 'e.g. Žilvinas',
+      showIf: { field: 'customEngraving', equals: true },
+      validation: [{ type: 'required' }, { type: 'maxLength', value: 20 }],
+    },
+  ],
+}
