@@ -9,7 +9,7 @@ import { TextField } from '../lab/ui-kit/components/TextField/TextField'
 import { Select } from '../lab/ui-kit/components/Select/Select'
 import { Dialog } from '../lab/ui-kit/components/Dialog/Dialog'
 
-const SOURCE_URL = 'https://github.com/MethGuys/ui-kit'
+const SOURCE_URL = 'https://github.com/AkelisDev/ui-kit'
 
 const FRUIT_OPTIONS = [
     { value: 'apple', label: 'Apple' },

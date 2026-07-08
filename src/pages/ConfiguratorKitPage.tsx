@@ -6,7 +6,7 @@ import { ConfiguratorProvider, useConfiguratorStore } from '../lab/configurator-
 import { ConfiguratorForm } from '../lab/configurator-kit/components/ConfiguratorForm'
 import { SummaryPanel } from '../lab/configurator-kit/components/SummaryPanel'
 
-const SOURCE_URL = 'https://github.com/MethGuys/configurator-kit'
+const SOURCE_URL = 'https://github.com/AkelisDev/configurator-kit'
 
 const STATS = [
     { value: '3', label: 'Example domains' },

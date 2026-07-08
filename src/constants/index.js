@@ -82,7 +82,7 @@ export const PROJECTS = [
     description:
       "An accessible component library — Button, Checkbox, TextField, Select, Dialog — each keyboard-operable and verified with jest-axe in every test file. The Select is a from-scratch ARIA combobox instead of a wrapped native element; the Dialog implements a real focus trap with restoration. 32 tests passing.",
     technologies: ["React", "TypeScript", "Vitest", "jest-axe", "Tailwind CSS"],
-    sourceUrl: "https://github.com/MethGuys/ui-kit",
+    sourceUrl: "https://github.com/AkelisDev/ui-kit",
     demoPath: "/lab/ui-kit",
   },
   {
@@ -90,7 +90,7 @@ export const PROJECTS = [
     description:
       "A schema-driven product configurator engine — dependency rules, live pricing, and validation — driving three unrelated demo products (bike builder, PC build, hoodie customizer) from plain schema data. Each instance is Context-scoped rather than a global singleton, so two configurators can run independently on the same page — verified with a dedicated isolation test. 32 tests passing. The public, non-proprietary version of the problem I solve daily on Ryterna's configurator platform.",
     technologies: ["React", "TypeScript", "Zustand", "Vitest", "Tailwind CSS"],
-    sourceUrl: "https://github.com/MethGuys/configurator-kit",
+    sourceUrl: "https://github.com/AkelisDev/configurator-kit",
     demoPath: "/lab/configurator-kit",
   },
   {
@@ -99,7 +99,7 @@ export const PROJECTS = [
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart.",
     technologies: ["HTML", "CSS", "React"],
-      sourceUrl: "https://github.com/MethGuys/E-Commerce.git"
+      sourceUrl: "https://github.com/AkelisDev/E-Commerce.git"
   },
   {
     title: "Portfolio Website",
@@ -107,7 +107,7 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Bootstrap", "Tailwind"],
-      sourceUrl: "https://github.com/MethGuys/Portfolio.git"
+      sourceUrl: "https://github.com/AkelisDev/Portfolio.git"
   },
 ];
 
@@ -118,5 +118,5 @@ export const CONTACT = {
 
 export const SOCIALS = {
   linkedin: "https://www.linkedin.com/in/akelis-zilvinas/",
-  github: "https://github.com/MethGuys",
+  github: "https://github.com/AkelisDev",
 };
