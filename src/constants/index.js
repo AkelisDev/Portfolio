@@ -73,6 +73,8 @@ Owned the state management architecture (86 Vuex modules) and the validation fra
 Coordinated with backend and production-systems engineers to integrate shop-floor equipment communication (WebSocket, Telnet) into the configurator.
 Most active contributor on the codebase — 1,500+ of roughly 2,800 commits — while working across the team's shared architecture and review process.`,
     technologies: ["Vue.js", "Vuex", "JavaScript", "Node.js", "REST APIs", "WebSocket", "HTML", "CSS", "Bootstrap"],
+    liveUrl: "https://configurator.ryternaentry.com/",
+    liveNote: "Public customer-facing configurator — admin, manager, and manufacturing tooling not shown",
   },
 ];
 

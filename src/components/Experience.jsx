@@ -1,6 +1,7 @@
 import React from 'react';
 import { EXPERIENCES } from "../constants/index.js";
 import { motion } from "framer-motion";
+import { RiExternalLinkLine } from "react-icons/ri";
 import SectionHeading from "./SectionHeading.jsx";
 
 const Experience = () => {
@@ -46,13 +47,27 @@ const Experience = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="mb-4 flex flex-wrap gap-2">
                                 {experience.technologies.map((tech, techIndex) => (
                                     <span key={techIndex} className="rounded border border-line bg-ink px-2 py-1 font-mono text-xs text-neutral-400">
                                         {tech}
                                     </span>
                                 ))}
                             </div>
+                            {experience.liveUrl && (
+                                <div className="border-t border-line pt-4">
+                                    <a
+                                        href={experience.liveUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-1 text-sm text-accent hover:underline">
+                                        <RiExternalLinkLine /> View the live configurator
+                                    </a>
+                                    {experience.liveNote && (
+                                        <p className="mt-1 text-xs text-neutral-500">{experience.liveNote}</p>
+                                    )}
+                                </div>
+                            )}
                         </motion.div>
                     </div>
                 ))}
