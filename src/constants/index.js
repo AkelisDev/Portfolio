@@ -113,8 +113,7 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: "Pašilės g. 118, Kaunas, Lithuania",
-  phoneNo: "+370 633 84741",
-  email: "zilvinasakelis@yahoo.com",
+  email: "akeliszilvinas@gmail.com",
 };
 
 export const SOCIALS = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { CONTACT, RESUME_URL } from "../constants/index.js";
 import { motion } from "framer-motion";
-import { RiMailLine, RiPhoneLine, RiMapPinLine, RiFileDownloadLine } from "react-icons/ri";
+import { RiMailLine, RiMapPinLine, RiFileDownloadLine } from "react-icons/ri";
 import SectionHeading from "./SectionHeading.jsx";
 
 const Contact = () => {
@@ -22,9 +22,6 @@ const Contact = () => {
                     <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-3 text-lg text-neutral-200 transition hover:text-accent">
                         <RiMailLine className="text-accent" /> {CONTACT.email}
                     </a>
-                    <p className="flex items-center gap-3 text-neutral-400">
-                        <RiPhoneLine className="text-accent" /> {CONTACT.phoneNo}
-                    </p>
                     <p className="flex items-center gap-3 text-neutral-400">
                         <RiMapPinLine className="text-accent" /> {CONTACT.address}
                     </p>
