@@ -14,10 +14,11 @@ import {
     RiPuzzleFill,
     RiTranslate2,
     RiRouteLine,
+    RiBarcodeLine,
 } from "react-icons/ri";
 import { TbComponents, TbApi, TbPlugConnected, TbFileTypePdf } from "react-icons/tb";
-import { FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { SiTypescript, SiMysql, SiJest, SiPlaywright, SiStorybook, SiGit } from "react-icons/si";
 
 const ICONS = {
     "Vue.js": RiVuejsLine,
@@ -34,16 +35,21 @@ const ICONS = {
     "i18n / multi-locale": RiTranslate2,
     "Node.js": FaNodeJs,
     "REST APIs": TbApi,
-    "WebSocket / Telnet": TbPlugConnected,
-    "PDF document pipelines": TbFileTypePdf,
-    "Git": FaGitAlt,
+    "WebSocket / SSE / Telnet": TbPlugConnected,
+    "SVG drawing & PDF pipelines": TbFileTypePdf,
+    "Barcode scanning": RiBarcodeLine,
+    "MySQL / MariaDB": SiMysql,
+    "Jest": SiJest,
+    "Playwright & Cypress": SiPlaywright,
+    "Storybook": SiStorybook,
+    "Git & Jira": SiGit,
 };
 
 const Skills = () => {
     return (
         <div id="skills" className="scroll-mt-24 border-b border-line pb-24">
             <SectionHeading index="02" title="Skills" />
-            <div className="grid gap-8 lg:grid-cols-3">
+            <div className="grid gap-8 lg:grid-cols-2">
                 {SKILLS.map((group, groupIndex) => (
                     <motion.div
                         key={group.category}
